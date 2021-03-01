@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,600');
-
+@import '~ngx-toastr/toastr.css';  
 body {
   font-family: 'Muli', sans-serif;
   background: #F5F5F6;
@@ -242,4 +242,10 @@ body .btn-danger:hover {
 
 .custom-control label {
   font-weight: 400;
+}
+
+
+/* Add application styles & imports to this file! */
+#toast-container > div {
+    opacity:1;
 }
