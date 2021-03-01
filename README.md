@@ -11,13 +11,13 @@ Full Stack Demo
 4. sudo a2enmod rewrite
 5. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
-	 <Directory /var/www/html>
-            Options All -Indexes
-            Options +FollowSymLinks
-            AllowOverride All
-            Require all granted
-        </Directory>
-        ```
+	<Directory /var/www/html>
+        Options All -Indexes
+        Options +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ```
 6. Create a .htaccess file on /var/www/html and add the following content
 	```
 	RewriteEngine On
