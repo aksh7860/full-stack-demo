@@ -11,7 +11,7 @@ Full Stack Demo
 4. sudo a2enmod rewrite
 5. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
-	<Directory /var/www/html>
+	 <Directory /var/www/html>
             Options All -Indexes
             Options +FollowSymLinks
             AllowOverride All
