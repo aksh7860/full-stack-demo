@@ -48,7 +48,7 @@ export class AppComponent {
       let user = this.registrationForm.value;
       let postData = JSON.stringify(user);
       console.log(postData);
-        this.http.post<any>('http://localhost/api/user/create.php', postData).subscribe({
+        this.http.post<any>('http://localhost/api/user/create', postData).subscribe({
           next: data => {
               console.log("Success");
               this.showSuccess();
@@ -69,13 +69,13 @@ export class AppComponent {
   }
 
   showSuccess(){
-    this.toastrService.success('Hello world!', 'Toastr fun!',{
+    this.toastrService.success('Success!', 'User has been created!',{
       disableTimeOut:true
     });
   }
 
   showFailure(){
-    this.toastrService.error('Unable to Save User!', 'Toastr fun!',{
+    this.toastrService.error('Error!', 'Unable to add user. Try Again!',{
       disableTimeOut:true
     });
   }  
