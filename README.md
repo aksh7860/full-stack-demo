@@ -27,8 +27,11 @@ Full Stack Demo
 	RewriteRule (.*) $1.php [L]
 	```
 
-7. sudo service apache2 restart
-
+7.  sudo service apache2 restart
+8.  sudo apt-get install libncurses5-dev libncursesw5-dev
+9.  sudo apt-get update
+10. sudo apt-get install git
+11. sudo apt install vim
 
 
 
