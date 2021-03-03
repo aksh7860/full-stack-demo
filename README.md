@@ -5,6 +5,7 @@ Full Stack Demo
 	git clone https://github.com/aksh7860/full-stack-demo.git
 
 ## Setting up Backend
+sudo service mysql restart
 1. Create a database 'test'
 2. Execute the users.sql query 
 3. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
