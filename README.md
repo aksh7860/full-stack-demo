@@ -7,7 +7,6 @@ Full Stack Demo
 
 ## Setting up Backend
 1. sudo service mysql restart
-2. sudo apt-get install libncurses5-dev libncursesw5-dev
 3. sudo apt-get update
 4. sudo apt install vim
 5. Create a database 'test'(command: create database test)
@@ -39,6 +38,6 @@ Full Stack Demo
 ## Setting Up Front End
 1. Go to /home/theia/full-stack-demo/angular
 2. Run sudo npm install
-3. Run ng serve
+3. echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+3. Run ng serve --sourceMap=false
 4. Open live preview at http://localhost:4200
-
