@@ -32,6 +32,7 @@ Full Stack Demo
 	```
 
 11.  sudo service apache2 restart
+12.  sudo apt-get install php7.2-mysql
 
 
 
