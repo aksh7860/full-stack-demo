@@ -38,6 +38,5 @@ Full Stack Demo
 ## Setting Up Front End
 1. Go to /home/theia/full-stack-demo/angular
 2. Run sudo npm install
-3. echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-3. Run ng serve --sourceMap=false
+3. Run ng serve
 4. Open live preview at http://localhost:4200
