@@ -37,7 +37,7 @@ Full Stack Demo
 		curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"name":"Abhishek","contact_no":"9650056823","email":"abhi.kumar793@gmail.com"}' \
-  http://localhost/api/users/create
+  http://localhost/api/user/create
 	```
 14. Curl Request for get  
 	```
