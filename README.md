@@ -30,13 +30,14 @@ Full Stack Demo
 	RewriteCond %{REQUEST_FILENAME}.php -f
 	RewriteRule (.*) $1.php [L]
 	```
-
-11.  sudo service apache2 restart
-12.  sudo apt-get install php7.2-mysql
+11.  sudo apt-get install php7.2-mysql
+12.  sudo service apache2 restart
 13.  Curl Request for post 
   	```
-		curl --header "Content-Type: application/json"   --request POST   --data '{"name":"Abhishek","contact_no":"9650056823","email":"abhi.kumar793@gmail.com"}'   http://localhost/api/user/create
-		
+		curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"name":"Abhishek","contact_no":"9650056823","email":"abhi.kumar793@gmail.com"}' \
+  http://localhost/api/users/create
 	```
 14. Curl Request for get  
 	```
