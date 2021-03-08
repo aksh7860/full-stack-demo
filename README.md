@@ -13,13 +13,15 @@ Full Stack Demo
 6. Login to Mysql console and execute the below commands
 7. CREATE USER 'temp'@'localhost' IDENTIFIED BY 'redhat';
 8. GRANT ALL PRIVILEGES ON * . * TO 'temp'@'localhost';
-9. FLUSH PRIVILEGES;
-10. sudo service mysql restart
-11. Change creds in /home/theia/full-stack-demo/api/config/database.php
-12. Execute the users.sql query 
-13. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
-14. sudo a2enmod rewrite
-15. Add the following line in /etc/apache2/sites-available/000-default.conf
+10. use mysql;
+11. UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+12. FLUSH PRIVILEGES;
+13. sudo service mysql restart
+14. Change creds in /home/theia/full-stack-demo/api/config/database.php
+15. Execute the users.sql query 
+16. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
+17. sudo a2enmod rewrite
+18. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
 	<Directory /var/www/html>
         Options All -Indexes
