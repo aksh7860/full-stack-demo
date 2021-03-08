@@ -10,10 +10,15 @@ Full Stack Demo
 3. sudo apt-get update
 4. sudo apt install vim
 5. Create a database 'test'(command: create database test)
-6. Execute the users.sql query 
-7. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
-8. sudo a2enmod rewrite
-9. Add the following line in /etc/apache2/sites-available/000-default.conf
+6. Login to Mysql console and execute the below commands
+7. CREATE USER 'temp'@'localhost' IDENTIFIED BY 'redhat';
+8. GRANT ALL PRIVILEGES ON * . * TO 'temp'@'localhost';
+9. FLUSH PRIVILEGES;
+10. sudo service mysql restart
+11. Execute the users.sql query 
+12. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
+13. sudo a2enmod rewrite
+14. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
 	<Directory /var/www/html>
         Options All -Indexes
