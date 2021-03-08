@@ -35,7 +35,7 @@ Full Stack Demo
 12.  sudo apt-get install php7.2-mysql
 13.  Curl Request for post 
   	```
-	curl --header "Content-Type: application/json"   --request POST   --data '{"name":"Abhishek","contact_no":"9650056823","email":"abhi.kumar793@gmail.com"}'   http://localhost/api/user/create
+		curl --header "Content-Type: application/json"   --request POST   --data '{"name":"Abhishek","contact_no":"9650056823","email":"abhi.kumar793@gmail.com"}'   http://localhost/api/user/create
 		
 	```
 14. Curl Request for get  
