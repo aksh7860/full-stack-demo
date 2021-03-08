@@ -15,10 +15,11 @@ Full Stack Demo
 8. GRANT ALL PRIVILEGES ON * . * TO 'temp'@'localhost';
 9. FLUSH PRIVILEGES;
 10. sudo service mysql restart
-11. Execute the users.sql query 
-12. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
-13. sudo a2enmod rewrite
-14. Add the following line in /etc/apache2/sites-available/000-default.conf
+11. Change creds in /home/theia/full-stack-demo/api/config/database.php
+12. Execute the users.sql query 
+13. Create a symlink ln -s /home/theia/full-stack-demo/api /var/www/html/
+14. sudo a2enmod rewrite
+15. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
 	<Directory /var/www/html>
         Options All -Indexes
