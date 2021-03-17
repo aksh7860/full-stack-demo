@@ -1,7 +1,7 @@
 # full-stack-demo
 Full Stack Demo
 
-## Take a clone of repo on /home/theia folder
+## Take a clone of repo on /home/project/ folder
 	sudo apt-get install git
 	git clone https://github.com/aksh7860/full-stack-demo.git
 
@@ -18,9 +18,9 @@ Full Stack Demo
 12. UPDATE mysql.user SET authentication_string = PASSWORD('redhat') WHERE user = 'root';
 13. FLUSH PRIVILEGES;
 14. sudo service mysql restart
-15. Change creds in /home/theia/full-stack-demo/api/config/database.php
+15. Change creds in /home/project/full-stack-demo/api/config/database.php
 16. Execute the users.sql query 
-17. Create a symlink ln -s /home/theia/full-stack-demo/api/ /var/www/html/
+17. Create a symlink ln -s /home/project/full-stack-demo/api/ /var/www/html/
 18. sudo a2enmod rewrite
 19. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
