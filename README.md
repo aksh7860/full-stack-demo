@@ -14,15 +14,14 @@ Full Stack Demo
 7. CREATE USER 'temp'@'localhost' IDENTIFIED BY 'redhat';
 8. GRANT ALL PRIVILEGES ON * . * TO 'temp'@'localhost';
 10. use mysql;
-11. UPDATE user SET plugin='mysql_native_password' WHERE User='root';
-12. UPDATE mysql.user SET authentication_string = PASSWORD('redhat') WHERE user = 'root';
-13. FLUSH PRIVILEGES;
-14. sudo service mysql restart
-15. Change creds in /home/project/full-stack-demo/api/config/database.php
-16. Execute the users.sql query 
-17. Create a symlink ln -s /home/project/full-stack-demo/api/ /var/www/html/
-18. sudo a2enmod rewrite
-19. Add the following line in /etc/apache2/sites-available/000-default.conf
+11. UPDATE mysql.user SET authentication_string = PASSWORD('redhat') WHERE user = 'root';
+12. FLUSH PRIVILEGES;
+13. sudo service mysql restart
+14. Change creds in /home/project/full-stack-demo/api/config/database.php
+15. Execute the users.sql query 
+16. Create a symlink ln -s /home/project/full-stack-demo/api/ /var/www/html/
+17. sudo a2enmod rewrite
+18. Add the following line in /etc/apache2/sites-available/000-default.conf
 	```
 	<Directory /var/www/html>
         Options All -Indexes
@@ -31,7 +30,7 @@ Full Stack Demo
         Require all granted
     </Directory>
     ```
-10. Create a .htaccess file on /var/www/html and add the following content
+19. Create a .htaccess file on /var/www/html and add the following content
 	```
 	RewriteEngine On
 	RewriteCond %{REQUEST_FILENAME} !-d
@@ -39,13 +38,13 @@ Full Stack Demo
 	RewriteCond %{REQUEST_FILENAME}.php -f
 	RewriteRule (.*) $1.php [L]
 	```
-11.  sudo apt-get install php7.2-mysql
-12.  sudo service apache2 restart
-13.  Curl Request for post 
+20.  sudo apt-get install php7.2-mysql
+21.  sudo service apache2 restart
+22.  Curl Request for post 
   	```
-	curl --header "Content-Type: application/json" --request POST --data '{"name":"Abhishek","contact_no":"9650056823","email":"abhi.kumar793@gmail.com"}'      http://localhost/api/user/create
+	curl --header "Content-Type: application/json" --request POST --data '{"name":"Abhishek","contact_no":"9650056785","email":"abhi.kumar@gmail.com"}'      http://localhost/api/user/create
 	```
-14. Curl Request for get  
+23. Curl Request for get  
 	```
 	   curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://localhost/api/user/read
 	```
@@ -54,7 +53,7 @@ Full Stack Demo
 
 
 ## Setting Up Front End
-1. Go to /home/theia/full-stack-demo/angular
+1. Go to /home/project/full-stack-demo/angular
 2. Run sudo npm install
 3. Run ng serve
 4. Open live preview at http://localhost:4200
